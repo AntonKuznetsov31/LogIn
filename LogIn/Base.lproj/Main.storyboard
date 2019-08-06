@@ -118,9 +118,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeR-v8-23j">
-                                <rect key="frame" x="130" y="590" width="114" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeR-v8-23j">
+                                <rect key="frame" x="151" y="388" width="73" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Go back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -134,8 +133,10 @@
                         <constraints>
                             <constraint firstItem="2pC-0J-xIw" firstAttribute="centerX" secondItem="ZoH-k3-Vsu" secondAttribute="centerX" id="0Pc-9t-EbX"/>
                             <constraint firstAttribute="bottom" secondItem="9fh-xc-XlQ" secondAttribute="bottom" id="KeF-7e-4hh"/>
+                            <constraint firstItem="xeR-v8-23j" firstAttribute="centerY" secondItem="9fh-xc-XlQ" secondAttribute="centerY" id="Ls8-G8-uPP"/>
                             <constraint firstItem="9fh-xc-XlQ" firstAttribute="top" secondItem="WDh-kC-DoZ" secondAttribute="top" id="QfK-bc-FIE"/>
                             <constraint firstItem="9fh-xc-XlQ" firstAttribute="trailing" secondItem="ZoH-k3-Vsu" secondAttribute="trailing" id="dT3-7g-RQw"/>
+                            <constraint firstItem="xeR-v8-23j" firstAttribute="centerX" secondItem="9fh-xc-XlQ" secondAttribute="centerX" id="eCz-we-V1n"/>
                             <constraint firstItem="9fh-xc-XlQ" firstAttribute="leading" secondItem="ZoH-k3-Vsu" secondAttribute="leading" id="xJO-3L-Zzy"/>
                             <constraint firstItem="2pC-0J-xIw" firstAttribute="top" secondItem="ZoH-k3-Vsu" secondAttribute="top" constant="172" id="zGD-0j-EVB"/>
                         </constraints>

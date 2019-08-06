@@ -10,6 +10,5 @@ import Foundation
 
 struct User {
     var username = "u"
-    
     var password = "p"
 }
