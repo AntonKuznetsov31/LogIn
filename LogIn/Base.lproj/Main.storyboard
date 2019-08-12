@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--User Data View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="UserDataViewController" customModule="LogIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LogInViewController" customModule="LogIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,12 +37,12 @@
                                                 <rect key="frame" x="0.0" y="28.333333333333343" width="187.66666666666666" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="done" textContentType="username"/>
+                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="next" textContentType="username"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIF-Sh-laA">
                                                 <rect key="frame" x="0.0" y="66.333333333333343" width="187.66666666666666" height="30"/>
                                                 <state key="normal" title="Forgot username?">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="forgotUsernamePressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="a4f-Fb-Bvb"/>
@@ -68,7 +68,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sf-83-Baw">
                                                 <rect key="frame" x="0.0" y="66.333333333333371" width="187.66666666666666" height="30"/>
                                                 <state key="normal" title="Forgot password?">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="forgotPasswordPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="cKc-fh-AfV"/>
@@ -78,6 +78,17 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k13-Za-M9O">
+                                <rect key="frame" x="104" y="380" width="167" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="dtu-lh-BPl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -94,12 +105,12 @@
                     <connections>
                         <outlet property="passwordTextField" destination="Qvr-tx-Ch8" id="3lj-BO-JIV"/>
                         <outlet property="userNameTextField" destination="yAw-lG-GAx" id="jLU-q4-JSN"/>
-                        <segue destination="NcH-c9-4Hs" kind="show" identifier="welcomeSegue" id="fMq-DG-SUg"/>
+                        <segue destination="NcH-c9-4Hs" kind="show" identifier="logInSegue" id="fMq-DG-SUg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="116"/>
+            <point key="canvasLocation" x="52" y="115.27093596059113"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="YyJ-gr-mai">
@@ -125,7 +136,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Sjc-mX-fPq" kind="show" id="1Wz-89-PgB"/>
+                                    <segue destination="b0B-s6-97F" kind="unwind" unwindAction="unwindSegueWithSegue:" id="Q13-1K-zV1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -144,6 +155,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ApQ-Rm-iqw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="b0B-s6-97F" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="820" y="116.00985221674877"/>
         </scene>
@@ -156,7 +168,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="railroad" translatesAutoresizingMaskIntoConstraints="NO" id="EzR-g1-zhl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812.00000000000023"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5W-Eg-G1o">
                                 <rect key="frame" x="93.666666666666671" y="581.66666666666663" width="187.66666666666663" height="61"/>
