@@ -2,8 +2,8 @@
 //  LogInViewController.swift
 //  LogIn
 //
-//  Created by Anton Kuznetsov on 8/6/19.
-//  Copyright © 2019 AntonKuznetsov. All rights reserved.
+//  Created by Anton Kuznetsov on 1/21/20.
+//  Copyright © 2020 AntonKuznetsov. All rights reserved.
 //
 
 import UIKit
@@ -16,8 +16,8 @@ class LogInViewController: UIViewController {
     
     // MARK: - Private Properties
     private var user = User()
-    private var enteredUsername = String()
-    private var enteredPassword = String()
+    var enteredUsername = String()
+    var enteredPassword = String()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -71,37 +71,3 @@ extension LogInViewController {
         present(alert, animated: true)
     }
 }
-
-// MARK: - Text field delegate
-extension LogInViewController: UITextFieldDelegate {
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        
-        guard let enteredText = textField.text else { return }
-        
-        switch textField.tag {
-        case 0:
-            enteredUsername = enteredText
-        case 1:
-            enteredPassword = enteredText
-        default:
-            return
-        }
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == userNameTextField {
-            textField.resignFirstResponder()
-            passwordTextField.becomeFirstResponder()
-        } else {
-            logInPressed()
-        }
-        return true
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
-}
-

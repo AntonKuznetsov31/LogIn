@@ -2,8 +2,8 @@
 //  User.swift
 //  LogIn
 //
-//  Created by Anton Kuznetsov on 8/6/19.
-//  Copyright © 2019 AntonKuznetsov. All rights reserved.
+//  Created by Anton Kuznetsov on 1/21/20.
+//  Copyright © 2020 AntonKuznetsov. All rights reserved.
 //
 
 import Foundation
